@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ChallengesService } from './services/challenges.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'assessment-task';
+
+  challenges$: Observable<any>;
+  constructor(private challengesService: ChallengesService) {
+    this.challenges$ = this.challengesService.getChallenges();
+  }
+
+
 }

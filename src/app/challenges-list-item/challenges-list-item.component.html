@@ -1,5 +1,8 @@
 <div class="shadow rounded-md mb-4 bg-white flex justify-between">
-  <a href="#" class="p-3 rounded-lg hover:bg-gray-50 w-full">
+  <a
+    routerLink="/challenge-detail/{{ id }}"
+    class="p-3 rounded-lg hover:bg-gray-50 w-full"
+  >
     <div class="ml-4">
       <p class="text-base font-medium text-gray-900 text-2xl">
         {{ challenge.node.title[0].text }}

@@ -1,0 +1,32 @@
+<a class="flex items-center cursor-pointer my-6" routerLink="/challenges">
+  <svg
+    class="w-4 h-4"
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M10 19l-7-7m0 0l7-7m-7 7h18"
+    />
+  </svg>
+  <span class="ml-3"> Back to the list </span>
+</a>
+<div *ngIf="challenge" class="shadow rounded-md mb-4 bg-white">
+  <div class="p-3 flex justify-between">
+    <h1 class="text-base font-medium text-gray-900 text-2xl ml-4">
+      {{ challenge.node.title[0].text }}
+    </h1>
+  </div>
+  <div class="mt-5">
+    <img
+      *ngIf="challenge.node.logo"
+      src="{{ challenge.node.logo.url }}"
+      alt=""
+      style="width: 100%; height: auto"
+    />
+  </div>
+</div>

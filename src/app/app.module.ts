@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
 import { ChallengesListComponent } from './challenges-list/challenges-list.component';
 import { ChallengesListItemComponent } from './challenges-list-item/challenges-list-item.component';
+import { ChallengeDetailComponent } from './challenge-detail/challenge-detail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ChallengesListComponent,
-    ChallengesListItemComponent
+    ChallengesListItemComponent,
+    ChallengeDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,9 @@
+<div>
+  <h1>Challenge Logo Viewer App</h1>
+  <app-challenges-list-item
+    *ngFor="let challenge of challenges$ | async; let id = index"
+    [challenge]="challenge"
+    [id]="id"
+  >
+  </app-challenges-list-item>
+</div>

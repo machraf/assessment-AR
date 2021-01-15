@@ -5,11 +5,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.module';
+import { ChallengesListComponent } from './challenges-list/challenges-list.component';
+import { ChallengesListItemComponent } from './challenges-list-item/challenges-list-item.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChallengesListComponent,
+    ChallengesListItemComponent
   ],
   imports: [
     BrowserModule,

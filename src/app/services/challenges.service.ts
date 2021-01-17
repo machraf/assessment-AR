@@ -24,17 +24,28 @@ const GET_CHALLENGES = gql`
 export class ChallengesService {
   private favourites: Map<number, boolean>;
 
+  setFavourites(favourites: Map<number, boolean>) {
+    this.favourites = favourites;
+  }
+  getFavourites(): Map<number, boolean> {
+    return this.favourites;
+  }
+
   constructor(private apollo: Apollo) {
     this.favourites = new Map();
   }
 
   toggleFavourite(id: number): void {
-    if (this.favourites.has(id))
+    if (this.favourites.has(id)) {
       this.favourites.set(id, !this.favourites.get(id));
-    else this.favourites.set(id, true);
+    } else {
+      this.favourites.set(id, true);
+    }
   }
   isFavourite(id: number): boolean {
-    if (this.favourites.has(id)) return this.favourites.get(id);
+    if (this.favourites.has(id)) {
+      return this.favourites.get(id);
+    }
     return false;
   }
   getChallenges(): Observable<ApolloQueryResult<any>> {
